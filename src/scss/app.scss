@@ -2,6 +2,39 @@ main {
   padding: 50px;
 }
 
+.lightning {
+  display: flex;
+  position: relative;
+  outline: none;
+  border: none;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    position: absolute;
+    background: #059B96;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  }
+  &__count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    right: 0;
+    position: absolute;
+    background: #FF2E60;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  }
+}
+
 
 .notification {
   background: #31AFAB;
@@ -13,4 +46,18 @@ main {
   border: 2px solid #FFC42E;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    &__icon {
+      margin-right: 8px;
+    }
+  }
+  .site-button {
+    background: #FFC42E;
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+  }
 }
