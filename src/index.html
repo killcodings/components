@@ -6,11 +6,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <main>
+
+
     <button class="lightning">
-        <img class="lightning__image" src="../dist/images/content/lightning.png">
+        <img class="lightning__image" src="../images/content/lightning.png">
         <div class="lightning__count">1</div>
         <div class="lightning__close">x</div>
     </button>
@@ -18,12 +21,68 @@
     <div class="notification">
         <div class="notification__info">
             <div class="notification__info__icon">
-                <img class="lightning__image" src="../dist/images/content/present.png">
+                <img class="lightning__image" src="../images/content/present.png">
             </div>
             <div class="notification__info__text">Download Bilbet App and get special bonus!</div>
         </div>
         <button class="site-button">Download!</button>
     </div>
+
+
+    <div class="calculate-bonus">
+        <div class="calculate-bonus__logo"><img class="lightning__image" src="../images/content/logo.png"></div>
+        <div class="calculate-bonus__title">
+            <h2 class="calculate-bonus__title-heading">Calculate Bonus</h2>
+        </div>
+        <div class="calculate-bonus__inputs">
+            <div class="calculate-bonus__inputs-wrapper">
+                <h3 class="calculate-bonus__inputs-title">Deposit/bet</h3>
+                <input class="calculate-bonus__inputs-item" type="number" value="" min="5" max="995" step="5">
+            </div>
+            <div class="calculate-bonus__inputs-wrapper">
+                <h3 class="calculate-bonus__inputs-title">Bonus</h3>
+                <input class="calculate-bonus__inputs-item percent" type="text" value="120%">
+            </div>
+            <div class="calculate-bonus__inputs-wrapper">
+                <h3 class="calculate-bonus__inputs-title">Bank</h3>
+                <div class="calculate-bonus__inputs-item">0</div>
+            </div>
+        </div>
+        <h3 class="calculate-bonus__description">You need to bet <span class="calculate-bonus__description-color">280</span> before you can withdraw</h3>
+        <button class="site-button">Claim Bonus</button>
+    </div>
+
+    <div class="wp-block-table is-style-stripes">
+        <table class="has-fixed-layout">
+            <tbody>
+                <tr>
+                    <td class="has-text-align-center">Bonus</td>
+                    <td class="has-text-align-center">After registering you will get a welcome bonus of up to +100% on your first deposit.</td>
+                </tr>
+                <tr>
+                    <td class="has-text-align-center">EXAMPLE</td>
+                    <td class="has-text-align-center">Deposit 100 INR and get 100 INR</td>
+                </tr>
+                <tr>
+                    <td class="has-text-align-center">TURNOVER</td>
+                    <td class="has-text-align-center">40x Bonus</td>
+                </tr>
+                <tr>
+                    <td class="has-text-align-center">BONUS TIME</td>
+                    <td class="has-text-align-center">30 days</td>
+                </tr>
+                <tr>
+                    <td class="has-text-align-center">MIN. ODDS</td>
+                    <td class="has-text-align-center">1.6</td>
+                </tr>
+                <tr>
+                    <td class="has-text-align-center">MIN. DEPOSIT</td>
+                    <td class="has-text-align-center">0,001 bitcoin</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </main>
 </body>
 </html>
