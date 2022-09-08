@@ -21,9 +21,9 @@ inputs[1].addEventListener('input', function (e) {
         if (int.length >= 3 && int.length <= 4 && !int.includes('.')) {
             e.target.value = int.slice(0, 3) + '%';
             e.target.setSelectionRange(4, 4);
-        } else if (int.length >= 5 & int.length <= 6) {
+        } else if (int.length >= 4 & int.length <= 5) {
             let whole = int.slice(0, 2);
-            let fraction = int.slice(3, 5);
+            let fraction = int.slice(3, 4);
             e.target.value = whole + fraction + '%';
         } else {
             e.target.value = int + '%';
