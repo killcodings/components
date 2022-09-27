@@ -1,0 +1,133 @@
+@use "src/scss/base/image-func";
+
+.media-text {
+  margin: 0 auto;
+  width: var(--content-width);
+
+  &__content {
+    grid-area: content;
+
+    & > *:not(:last-child) {
+      margin-bottom: 20px;
+      @media (max-width: 600px) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    grid-area: logo;
+
+    &-image {
+      @include image-func.sizeImage(53px, 53px);
+      margin-right: 12px;
+
+      .image-func {
+        background: var(--background-color);
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+  }
+
+  @media (max-width: 1238px) {
+    width: 100%;
+  }
+  &__media {
+    margin: 0 auto;
+    padding: 30px 0;
+    grid-area: media;
+
+    @media (max-width: 1238px) {
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      padding: 12px 0;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+  }
+
+  &_horizontal {
+    display: grid;
+    grid-template-areas:
+            "logo media"
+            "content media";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 53px;
+    gap: 20px 64px;
+
+    @media (max-width: 1366px) {
+      grid-template-areas:
+            "media"
+            "logo"
+            "content";
+      grid-template-columns: 600px;
+      padding-top: 8px;
+      grid-template-rows: auto;
+      justify-content: center;
+    }
+
+    @media (max-width: 632px) {
+      grid-template-areas:
+            "logo"
+            "media"
+            "content";
+      grid-template-columns: 1fr;
+    }
+
+    &:first-of-type {
+      padding-top: 28px;
+
+      @media (max-width: 600px) {
+        padding-top: 8px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 48px;
+
+      @media (max-width: 600px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    .media-text__media {
+      padding: 0;
+    }
+
+    &:first-child {
+      padding-top: 28px;
+    }
+  }
+
+  &_reverse {
+    grid-template-areas:
+            "media logo"
+            "media content";
+
+    @media (max-width: 1366px) {
+      grid-template-areas:
+            "media"
+            "logo"
+            "content";
+    }
+
+    @media (max-width: 632px) {
+      grid-template-areas:
+            "logo"
+            "media"
+            "content";
+      grid-template-columns: 1fr;
+    }
+  }
+}
+

@@ -1,0 +1,27 @@
+@use "src/scss/components/event/event";
+
+.events {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0 0 24px 0;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+    background-color: #EAECF0;
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #667085;
+    border-radius: 6px;
+  }
+
+  &__items {
+    display: flex;
+    width: max-content;
+
+  }
+
+}
+
+

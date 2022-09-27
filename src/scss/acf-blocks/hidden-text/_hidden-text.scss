@@ -1,0 +1,40 @@
+@use "src/scss/vars" as *;
+
+.hidden-text {
+  outline: none;
+  max-width: 855px;
+  padding: 25px 0;
+  margin: 0 auto;
+  border-top: 1px solid #EAECF0;
+  border-bottom: 1px solid #EAECF0;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    cursor: pointer;
+
+    &::after {
+      content: '\e801';
+      font-family: 'fontello';
+      font-weight: 300;
+      transform: translateY(0) rotateZ(0deg);
+      transition: 250ms all;
+      margin-left: auto;
+      color: var(--accent-color);
+    }
+  }
+
+  &[open] {
+    .hidden-text__title::after {
+      transform: translateY(0) rotateZ(180deg);
+    }
+
+    .hidden-text__content {
+      height: auto;
+      margin-top: 8px;
+    }
+  }
+}

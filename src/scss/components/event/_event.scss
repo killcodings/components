@@ -1,0 +1,120 @@
+@use "src/scss/components/odd/odd";
+
+.event {
+  padding: 16px;
+  width: 396px;
+  background: #F7F7F7;
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  & > *:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &__date {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #DADADA;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      background: #DADADA;;
+      width: 1px;
+      height: 18px;
+      left: 50%;
+      top: 3px;
+    }
+  }
+
+  &__time {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__live {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    width: 50px;
+    height: 22px;
+    color: #fff;
+    padding: 8px;
+    background: #FF7272;
+
+    &:after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #fff;
+      margin-left: 4px;
+    }
+  }
+
+  &__description {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #DADADA;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+  }
+
+  &__league {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #475467;
+
+    &:before {
+      content: "★";
+      color: #fff;
+      background: #fff;
+      text-shadow:
+      -0 -1px 0 #475467,
+      0 -1px 0 #475467,
+      -0 1px 0 #475467,
+      0 1px 0 #475467,
+      -1px -0 0 #475467,
+      1px -0 0 #475467,
+      -1px 0 0 #475467,
+      1px 0 0 #475467,
+      -1px -1px 0 #475467,
+      1px -1px 0 #475467,
+      -1px 1px 0 #475467,
+      1px 1px 0 #475467,
+      -1px -1px 0 #475467,
+      1px -1px 0 #475467,
+      -1px 1px 0 #475467,
+      1px 1px 0 #475467;
+    }
+
+  }
+
+  &__address {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #475467;
+
+    &:before {
+      content: '\e805';
+      font-family: "fontello";
+      margin-right: 4px;
+    }
+  }
+
+  &__odds {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+}

@@ -1,0 +1,36 @@
+.links-table {
+  width: 100%;
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 800px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 650px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  td {
+    padding: 16px;
+    text-align: center;
+    border: 1px solid rgba(184, 120, 120, 0.5);
+
+    .image-func {
+      width: 24px;
+      margin: 0 auto 16px auto;
+    }
+
+    &:nth-child(2) {
+      text-align: center;
+    }
+  }
+}

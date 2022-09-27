@@ -1,0 +1,24 @@
+//$accent-color: #681524;
+
+:root {
+  --accent-color: #681524;
+
+  --logo-width: 130px;
+  --primary-nav-menu-color: #000;
+  --primary-nav-submenu-border: rgb(238,238,34);
+  --primary-nav-submenu-shadow: rgba(0, 0, 0, 0.1);
+  --primary-nav-submenu-border-style: dashed;
+  --primary-nav-submenu-color: #000;
+  --primary-nav-submenu-background: #d7d7d7;
+  --primary-nav-submenu-color-hover: #FD5252FF;
+
+  --primary-nav-color-mobile: #fff;
+  --primary-nav-background-mobile: #D02E4B;
+  --primary-nav-width: 50%;
+
+  --buttons-padding: 18px;
+  --buttons-background: #D02E4B;
+  --buttons-background-hover: #fff;
+  --buttons-color-text: #fff;
+  --buttons-color-hover: #D02E4B;
+}
