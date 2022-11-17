@@ -20,34 +20,34 @@ time, mark, audio, video {
 }
 
 @mixin textSizeH1 {
-  font-size: 50px;
+  font-size: 40px;
   @media (max-width: 600px) {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 @mixin textSizeH2 {
-  font-size: 35px;
+  font-size: 32px;
   @media (max-width: 600px) {
-    font-size: 30px;
+    font-size: 24px;
   }
 }
 
 h1 {
   @include textSizeH1;
-  font-weight: 500;
   line-height: 120%;
   margin: 0;
+  letter-spacing: -0.02em;
 }
 
 h2 {
   @include textSizeH2;
-  font-weight: 600;
 }
 
 body {
   hyphens: auto;
   font-family: Inter, sans-serif;
   line-height: 1;
+  hyphens: none;
 }
 
 *,
@@ -69,8 +69,7 @@ em {
 
 h3 {
   font-size: 20px;
-  line-height: 1.75rem;
-  font-weight: 500;
+  line-height: 24px;
 }
 
 h4,
@@ -78,18 +77,18 @@ h5,
 h6 {
   font-size: 18px;
   line-height: 1.5;
-  font-weight: 500;
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
   margin: 0;
+  font-weight: 600;
 }
 
 p,
 li {
   font-size: 16px;
-  line-height: 1.25rem;
-  font-weight: 300;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 
@@ -100,6 +99,7 @@ ol, ul {
 a {
   font-weight: 400;
   text-decoration: none;
+  color: unset;
 }
 
 table {
@@ -109,7 +109,15 @@ table {
 
 .has-text-align-center {
   text-align: center;
+  width: 100%;
 }
+
+p.has-text-align-center:not(.banner p) {
+  @media (max-width: 600px) {
+    text-align: left;
+  }
+}
+
 .has-white-color {
   color: #fff;
 }

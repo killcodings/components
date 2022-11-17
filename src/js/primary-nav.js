@@ -11,10 +11,19 @@ export default class PrimaryNav {
             const burger = document.querySelector('.burger');
 
             let burgerClicked = false;
+
+            // burger.addEventListener('click', function(e){
+            //     console.log(e.target);
+            //     if(e.target.classList.contains('close') || e.target.parentElement.classList.contains('close')) {
+            //         popupConsultation.classList.remove('popup_consultation__active');
+            //     }
+            // });
+
             burger.addEventListener('click', function () {
                 this.classList.toggle('burger_active');
                 primaryNav.classList.toggle('primary-nav_showed');
                 document.querySelector('body').classList.toggle('no-scroll');
+
                 if (!burgerClicked) {
                     burgerClicked = true;
 

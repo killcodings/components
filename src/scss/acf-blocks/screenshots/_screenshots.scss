@@ -1,0 +1,25 @@
+@use "../../components/screenshot/screenshot";
+
+
+.screenshots {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0 0 24px 0;
+
+
+  &::-webkit-scrollbar {
+    height: 4px;
+    background-color: #EAECF0;
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 6px;
+  }
+
+  &__items {
+    display: flex;
+    width: max-content;
+  }
+}

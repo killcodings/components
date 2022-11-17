@@ -1,6 +1,7 @@
 @use "../../acf-blocks/filters/filters";
 @use "../../acf-blocks/brands/head";
 @use "brands__row-grid";
+@use "../../components/list/list";
 
 .brands {
 
@@ -49,7 +50,6 @@
     justify-content: center;
     background: #D02E4B;
     color: #fff;
-    font-weight: 500;
     font-size: 12px;
     line-height: 18px;
     position: absolute;
@@ -115,40 +115,8 @@
     border-right: var(--border-right-row);
     grid-area: highlights;
 
-    &-title {
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
-      margin-bottom: 18px;
-    }
-
-    &-lists {
-
-      li {
-        display: flex;
-        align-items: center;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
-
-        &:not(:last-child) {
-          padding-bottom: 12px;
-        }
-
-        &:before {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 16px;
-          height: 16px;
-          background: #F0CFD5;
-          margin-right: 8px;
-          font-family: "fontello";
-          content: '\e802';
-          font-size: 10px;
-          color: var(--color-icon);
-        }
-      }
+    &:not(:first-child) {
+      margin-left: unset;
     }
 
     @media (max-width: 820px) {
@@ -164,8 +132,8 @@
     grid-area: bonus;
 
     &-title {
-      font-weight: 500;
-      font-size: 17px;
+      font-weight: 600;
+      font-size: 16px;
       line-height: 25px;
       margin-bottom: 4px;
     }
@@ -184,7 +152,7 @@
         justify-content: center;
         width: 25px;
         height: 25px;
-        background: #F0CFD5;
+        background: var(--background-font-icon);
         margin-right: 8px;
         font-family: "fontello";
         content: '\e804';
@@ -244,9 +212,10 @@
     }
 
     &-title {
-      font-weight: 500;
+      font-weight: 600;
       font-size: 14px;
       line-height: 20px;
+      margin-top: 16px;
     }
 
     @media (max-width: 820px) {

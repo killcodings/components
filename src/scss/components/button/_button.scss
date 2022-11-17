@@ -12,11 +12,12 @@
   line-height: normal;
   font-family: Inter, sans-serif;
   text-decoration: none;
-  width: var(--button-width, 100%);
+  max-width: var(--button-width, 100%);
   position: relative;
   transition: 0.25s;
   cursor: pointer;
   justify-self: var(--position-btn);
+  height: 48px;
 
   &:hover,
   &:focus {

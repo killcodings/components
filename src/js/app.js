@@ -2,6 +2,11 @@ import '../scss/app.scss';
 
 import All from "./all";
 import PrimaryNav from "./primary-nav";
+import TopButton from "./top-button";
+
+
+
+import Swipers from "./swipers";
 
 
 
@@ -12,6 +17,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         },
         primaryNav: {
             init: () => new PrimaryNav
+        },
+        swipers: {
+            init: () => new Swipers
+        },
+        topButton: {
+            init: () => new TopButton
         }
     }
 

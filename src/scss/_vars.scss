@@ -1,7 +1,24 @@
 //$accent-color: #681524;
 
 :root {
-  --accent-color: #681524;
+
+  --offsets: 64px;
+
+  @media (max-width: 600px) {
+    --offsets: 16px;
+  }
+
+  --section-offsets: 48px;
+
+  @media (max-width: 600px) {
+    --section-offsets: 32px;
+  }
+
+  --opacity-bg: 1;
+
+  --accent-color: rgb(104 21 36 / var(--opacity-bg));
+
+  --text-footer: #fff;
 
   --logo-width: 130px;
   --primary-nav-menu-color: #000;
@@ -21,4 +38,13 @@
   --buttons-background-hover: #fff;
   --buttons-color-text: #fff;
   --buttons-color-hover: #D02E4B;
+
+
+  --background-font-icon: var(--accent-color);
+  --how-to-label-counter-bg: var(--accent-color);
+  --how-to-label-counter-color: #fff;
+
+  --position-lists: flex-start;
+
+  --logo-text-size: 100%;
 }

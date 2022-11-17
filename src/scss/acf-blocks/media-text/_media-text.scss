@@ -1,4 +1,5 @@
-@use "src/scss/base/image-func";
+@use "../../components/swiper/swiper";
+@use "../../components/logo-text/logo-text";
 
 .media-text {
   margin: 0 auto;
@@ -6,44 +7,26 @@
 
   &__content {
     grid-area: content;
+    display: flex;
+    flex-wrap: wrap;
 
-    & > *:not(:last-child) {
+    >*:not(:last-child) {
       margin-bottom: 20px;
+
       @media (max-width: 600px) {
         margin-bottom: 16px;
       }
     }
   }
 
-  &__logo {
-    display: flex;
-    align-items: center;
-    grid-area: logo;
-
-    &-image {
-      @include image-func.sizeImage(53px, 53px);
-      margin-right: 12px;
-
-      .image-func {
-        background: var(--background-color);
-      }
-    }
-
-    &-title {
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 30px;
-    }
-
-  }
 
   @media (max-width: 1238px) {
     width: 100%;
   }
   &__media {
-    margin: 0 auto;
     padding: 30px 0;
     grid-area: media;
+    min-width: 0;
 
     @media (max-width: 1238px) {
       width: 100%;
@@ -51,7 +34,6 @@
 
     @media (max-width: 600px) {
       padding: 12px 0;
-      border-radius: 16px;
       overflow: hidden;
     }
   }
@@ -62,13 +44,18 @@
             "logo media"
             "content media";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 53px;
+    grid-template-rows: auto 1fr;
     gap: 20px 64px;
+    margin-top: 48px;
 
     @media (max-width: 1366px) {
+      gap: 20px 32px;
+    }
+
+    @media (max-width: 932px) {
       grid-template-areas:
-            "media"
             "logo"
+            "media"
             "content";
       grid-template-columns: 600px;
       padding-top: 8px;
@@ -84,12 +71,8 @@
       grid-template-columns: 1fr;
     }
 
-    &:first-of-type {
-      padding-top: 28px;
-
-      @media (max-width: 600px) {
-        padding-top: 8px;
-      }
+    @media (max-width: 600px) {
+      padding-top: 8px;
     }
 
     &:not(:last-child) {
@@ -114,19 +97,37 @@
             "media logo"
             "media content";
 
-    @media (max-width: 1366px) {
+    @media (max-width: 932px) {
       grid-template-areas:
-            "media"
             "logo"
+            "media"
             "content";
     }
+  }
 
-    @media (max-width: 632px) {
+  &_blocks {
+    grid-template-areas:
+          "content media"
+          "buttons media";
+
+    @media (max-width: 932px) {
       grid-template-areas:
-            "logo"
+            "content"
             "media"
-            "content";
-      grid-template-columns: 1fr;
+            "buttons";
+    }
+
+    &_reverse {
+      grid-template-areas:
+          "media content"
+          "media buttons";
+
+      @media (max-width: 932px) {
+        grid-template-areas:
+            "content"
+            "media"
+            "buttons";
+      }
     }
   }
 }

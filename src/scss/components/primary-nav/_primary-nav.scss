@@ -1,5 +1,9 @@
 .primary-nav {
 
+  .main-menu-link, .sub-menu-link {
+    text-transform: uppercase;
+  }
+
   &__list {
     width: 100%;
     display: flex;
@@ -38,7 +42,7 @@
         &::after {
           content: '\e801';
           top: 1px;
-          right: 0;
+          right: -8px;
           color: var(--primary-nav-menu-color, #fff);
           transform: rotate(0);
         }
@@ -71,7 +75,7 @@
     &__link {
       color: var(--primary-nav-menu-color);
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       transition: 250ms color;
 
       &:hover, &:focus {
@@ -269,7 +273,7 @@
         border-bottom: 1px var(--primary-nav-submenu-border);
         border-style: var(--primary-nav-submenu-border-style);
         display: block;
-        font-weight: 500;
+        font-weight: 600;
         padding: 15px 10px;
       }
     }

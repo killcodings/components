@@ -41,5 +41,18 @@ export default class All {
                 });
             });
         }
+
+        function hideFilter() {
+            if (hideFilter.isRun) {
+                return false;
+            }
+            document.querySelector('.filters').remove();
+            hideFilter.isRun = true;
+        }
+        window.addEventListener('scroll', function () {
+            if (this.scrollY >= 4600) {
+                hideFilter();
+            }
+        });
     }
 }

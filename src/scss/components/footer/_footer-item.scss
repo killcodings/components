@@ -1,0 +1,12 @@
+@use "../../components/menu/menu";
+@use "../../components/widget/widget_custom_html";
+
+.footer__item {
+  flex-basis: 50%;
+
+  &-title {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 12px 0;
+    display: block;
+  }
+}

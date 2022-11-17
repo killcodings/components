@@ -1,0 +1,41 @@
+@use "../../base/image-func";
+
+.brand-tab {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+        "logo brand-tab-deposit"
+        "description brand-tab-deposit"
+        "buttons brand-tab-deposit";
+  grid-template-rows: auto;
+  grid-gap: 32px 20px;
+  padding: 32px;
+}
+
+.brand-tab {
+  background: var(--accent-color);
+
+  &__bonuses {
+    border: none;
+  }
+
+
+  &__logo {
+
+  }
+
+  &__image {
+    @include image-func.sizeImage(53px, 53px);
+  }
+
+
+  &__description {
+    grid-area: description;
+  }
+
+  &__deposit {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+}

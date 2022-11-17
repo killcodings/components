@@ -5,7 +5,7 @@
 
 // ACF Blocks
 @use "acf-blocks/section-tag";
-@use "acf-blocks/banner";
+@use "acf-blocks/banner/banner";
 @use "acf-blocks/buttons/buttons";
 @use "acf-blocks/media-text/media-text";
 @use "acf-blocks/links-table/links-table";
@@ -13,14 +13,27 @@
 @use "acf-blocks/brands/brands";
 @use "acf-blocks/posts/posts";
 @use "acf-blocks/hidden-text/hidden-text";
+@use "acf-blocks/brand-screen/brand-screen";
+@use "acf-blocks/lists/lists";
+@use "acf-blocks/screenshots/screenshots";
+@use "acf-blocks/how-to/how-to";
+@use "acf-blocks/brand-tabs/brand-tabs";
 
 // Components
 @use "components/header/header";
 @use "components/wp-block-table/wp-block-table";
+@use "components/footer/footer";
+@use "components/nav-socials/nav-socials";
+@use "components/page-update/page-update";
+@use "components/author-badge/author-badge";
+@use "components/comments/comments";
+@use "components/relative/relative";
+@use "components/top-button/top-button";
 
 
 
 @use "container";
+
 
 
 

@@ -30,6 +30,9 @@
   }
 
   &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
     margin-left: 5px;
   }
 
@@ -49,9 +52,9 @@
   }
 
   &__value {
-    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+    font-weight: 600;
     color: #475467;
   }
 

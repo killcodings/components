@@ -4,9 +4,10 @@
   display: grid;
   grid-template-rows: auto;
   grid-gap: 20px;
+  grid-area: buttons;
 
   &_columns-2 {
-    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-content: var(--position-btn);
   }
 

@@ -1,0 +1,16 @@
+
+
+.tabs-control {
+
+  &__item {
+    border: none;
+    cursor: pointer;
+    padding: 17px 43px;
+    color: var(--accent-color);
+
+    &_active {
+      background: var(--accent-color);
+      color:var(--color-text);
+    }
+  }
+}
