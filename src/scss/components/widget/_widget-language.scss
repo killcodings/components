@@ -1,6 +1,7 @@
 .widget {
   display: flex;
   cursor: pointer;
+  align-items: center;
 
   .wpml-ls {
     position: relative;
@@ -36,6 +37,7 @@
     &:before {
       margin: 0;
       font-size: 12px;
+      line-height: 16px;
     }
     &-open {
       &:before {

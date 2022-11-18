@@ -6,8 +6,8 @@
   grid-template-rows: auto;
   justify-content: center;
   padding: 20px 0;
-  border-top: 1px solid rgb(234 236 240 / 30%);
-  border-bottom: 1px solid rgb(234 236 240 / 30%);
+  border-top: 1px solid rgb(234 236 240 / var(--opacity-bg));
+  border-bottom: 1px solid rgb(234 236 240 / var(--opacity-bg));
 
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;
