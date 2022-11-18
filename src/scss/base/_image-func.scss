@@ -11,6 +11,6 @@ img {
 }
 
 @mixin sizeImage($width, $height) {
-  width: $width;
+  max-width: $width;
   height: $height;
 }

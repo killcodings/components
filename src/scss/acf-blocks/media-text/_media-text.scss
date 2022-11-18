@@ -19,7 +19,6 @@
     }
   }
 
-
   @media (max-width: 1238px) {
     width: 100%;
   }
@@ -57,22 +56,13 @@
             "logo"
             "media"
             "content";
-      grid-template-columns: 600px;
-      padding-top: 8px;
+      grid-template-columns: 1fr;
       grid-template-rows: auto;
       justify-content: center;
     }
 
-    @media (max-width: 632px) {
-      grid-template-areas:
-            "logo"
-            "media"
-            "content";
-      grid-template-columns: 1fr;
-    }
-
     @media (max-width: 600px) {
-      padding-top: 8px;
+      margin-top: 32px;
     }
 
     &:not(:last-child) {
