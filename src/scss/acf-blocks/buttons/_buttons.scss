@@ -6,13 +6,16 @@
   grid-gap: 20px;
   grid-area: buttons;
 
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
   &_columns-2 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-content: var(--position-btn);
 
     @media (max-width: 600px) {
       grid-template-columns: 1fr;
-      align-self: center;
     }
   }
 
@@ -55,8 +58,5 @@
     }
   }
 
-  @media (max-width: 450px) {
-    grid-template-columns: 1fr;
-  }
 }
 

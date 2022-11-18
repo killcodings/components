@@ -23,10 +23,14 @@
 .brand-screen-top {
   background: var(--accent-color);
   margin-top: 57px;
-  padding: 48px 16%;
+  padding: 48px 15%;
 
   & > *:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 48px 15%;
   }
 
   &__logo {
