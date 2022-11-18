@@ -9,6 +9,11 @@
   &_columns-2 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-content: var(--position-btn);
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+      align-self: center;
+    }
   }
 
   &_border {

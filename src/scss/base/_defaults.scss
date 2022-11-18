@@ -32,6 +32,11 @@ time, mark, audio, video {
   }
 }
 
+.max-width {
+  max-width: 855px;
+  margin: 0 auto;
+}
+
 h1 {
   @include textSizeH1;
   line-height: 120%;

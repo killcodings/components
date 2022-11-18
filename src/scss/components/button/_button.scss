@@ -24,6 +24,9 @@
     color: var(--buttons-color-hover);
     background: var(--buttons-background-hover);
   }
+  @media (max-width: 600px) {
+    justify-self: center;
+  }
 
   @media (max-width: 450px) {
     width: 100%;
