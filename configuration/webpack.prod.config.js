@@ -9,7 +9,7 @@ module.exports = merge(webpackConfiguration, {
   mode: 'production',
 
   /* Manage source maps generation process. Refer to https://webpack.js.org/configuration/devtool/#production */
-  devtool: false,
+  devtool: 'source-map',
 
   /* Optimization configuration */
   optimization: {
