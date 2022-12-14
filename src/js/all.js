@@ -54,5 +54,45 @@ export default class All {
                 hideFilter();
             }
         });
+
+
+
+
+
+
+
+
+        /*vhjfykt*/
+        const strands = document.querySelectorAll(".christmas-tree ul");
+        const duration = 3000;
+
+        strands.forEach((strand, i) => {
+            strand.style.transform = `rotateY(${
+                -i / (strands.length * 2.4) + 0.2
+            }turn) rotateX(22deg)`;
+
+            const bulbs = strand.querySelectorAll(".christmas-tree li");
+            bulbs.forEach((bulb, j) => {
+                //bulb.style.scale = 1 + j*.02
+                bulb.animate(
+                    [
+                        { background: "var(--back)" },
+                        { background: "var(--back)", offset: 0.9 },
+                        { background: "var(--fore)", offset: 0.95 },
+                        { background: "var(--fore)" }
+                    ],
+                    {
+                        duration,
+                        delay:
+                            (j * 2.25 * (((i + 1) * 2.5) / strands.length) * duration) /
+                            bulbs.length -
+                            3000,
+                        iterations: Infinity,
+                        easing: "cubic-bezier(0,.9,.5,1)"
+                    }
+                );
+            });
+        });
+
     }
 }
