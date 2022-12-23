@@ -512,11 +512,15 @@
   --fore: hsl(var(--fore-hue) 100% 50%);
   --fore-hue: 343;
   animation: colors 20000ms infinite linear;
-
   position: absolute;
   top: 20%;
   right: 10%;
   transform: scale(1);
+
+  @media (max-width: 600px) {
+    right: -40%;
+    top: 50%;
+  }
 
   ul {
     position: absolute;
