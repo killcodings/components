@@ -39,3 +39,11 @@
     position: unset;
   }
 }
+
+canvas {
+  background: hsl(0 0% 5%);
+  //height: 100vh;
+  //position: fixed;
+  width: 100vw;
+  inset: 0;
+}
